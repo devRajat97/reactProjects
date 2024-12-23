@@ -1,9 +1,13 @@
 import React from 'react'
+import FromComponent from './form'
 
 const body = () => {
-  return (
+
+
+
+  return (  
     <div>
-      <h1>Body</h1>
+    <FromComponent/>
     </div>
   )
 }
