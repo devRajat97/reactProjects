@@ -20,6 +20,12 @@ const FromComponent = () => {
   const handleAddUser = (e) => {
     e.preventDefault()
     console.log(formData, "This is form data");
+    setFromData({
+        fristName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    })
   };
 
   return (
