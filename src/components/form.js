@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 
 const FromComponent = () => {
   const [formData, setFromData] = useState({
@@ -7,6 +7,8 @@ const FromComponent = () => {
     email: "",
     phone: "",
   });
+
+  const [data,setData] = useState([])
 
   const onChangeInput = (e) => {
     setFromData((prevFormData) => {
@@ -18,14 +20,15 @@ const FromComponent = () => {
   };
 
   const handleAddUser = (e) => {
-    e.preventDefault()
-    console.log(formData, "This is form data");
+    e.preventDefault();
+    setData([...data,formData])
+    localStorage.setItem("users", JSON.stringify(data));
     setFromData({
-        fristName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    })
+      fristName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+    });
   };
 
   return (
