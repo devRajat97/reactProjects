@@ -1,8 +1,8 @@
 import React, { use, useState } from "react";
 
-const FromComponent = () => {
+const FormComponent = () => {
   const [formData, setFromData] = useState({
-    fristName: "",
+    firstName: "",
     lastName: "",
     email: "",
     phone: "",
@@ -21,8 +21,9 @@ const FromComponent = () => {
 
   const handleAddUser = (e) => {
     e.preventDefault();
-    setData([...data,formData])
-    localStorage.setItem("users", JSON.stringify(data));
+    const updateData = [...data,formData]
+    setData(updateData)
+    localStorage.setItem("users", JSON.stringify(updateData));
     setFromData({
       fristName: "",
       lastName: "",
@@ -73,4 +74,4 @@ const FromComponent = () => {
   );
 };
 
-export default FromComponent;
+export default FormComponent;

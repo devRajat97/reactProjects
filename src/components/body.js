@@ -1,5 +1,5 @@
 import React from 'react'
-import FromComponent from './form'
+import FormComponent from './form'
 
 const body = () => {
 
@@ -7,7 +7,7 @@ const body = () => {
 
   return (  
     <div>
-    <FromComponent/>
+    <FormComponent/>
     </div>
   )
 }
