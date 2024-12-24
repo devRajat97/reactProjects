@@ -1,15 +1,22 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import FormComponent from './form'
+import Table from './table'
 
-const body = () => {
 
 
+const Body = () => {
+
+  const [userData,setUserData]=useState([])
+  useEffect(() => {
+    setUserData(JSON.parse(localStorage.getItem("users")))
+  },[userData]);
 
   return (  
     <div>
-    <FormComponent/>
+    <FormComponent userData={userData} />
+    <Table/>
     </div>
   )
 }
 
-export default body
+export default Body

@@ -1,11 +1,13 @@
 
-import './App.css';
-import Body from './components/body';
+import "./App.css";
+import Body from "./components/body";
 
 function App() {
+ 
+
   return (
     <div>
-      <Body/>
+      <Body />
     </div>
   );
 }
