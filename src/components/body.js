@@ -6,14 +6,9 @@ import Table from './table'
 
 const Body = () => {
 
-  const [userData,setUserData]=useState([])
-  useEffect(() => {
-    setUserData(JSON.parse(localStorage.getItem("users")))
-  },[userData]);
-
   return (  
     <div>
-    <FormComponent userData={userData} />
+    <FormComponent />
     <Table/>
     </div>
   )
