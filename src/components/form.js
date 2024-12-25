@@ -8,6 +8,8 @@ const FormComponent = () => {
     phone: "",
   });
 
+  console.log(formData)
+
   const [data,setData] = useState([])
 
   const onChangeInput = (e) => {
