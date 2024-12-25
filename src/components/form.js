@@ -9,6 +9,7 @@ const FormComponent = () => {
   });
 
   const [data,setData] = useState([])
+  console.log(data)
 
   const onChangeInput = (e) => {
     setFromData((prevFormData) => {
