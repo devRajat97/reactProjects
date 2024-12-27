@@ -42,7 +42,7 @@ const FormComponent = () => {
           placeholder="First Name"
           name="fristName"
           onChange={(e) => onChangeInput(e)}
-          value={formData?.fristName}
+          value={formData?.firstName}
           required
         />
         <input
