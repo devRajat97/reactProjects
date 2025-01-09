@@ -21,6 +21,7 @@ const FormComponent = () => {
   };
 
   const handleAddUser = (e) => {
+    console.log("hello world ")
     e.preventDefault();
     const updateData = [...data,formData]
     setData(updateData)
